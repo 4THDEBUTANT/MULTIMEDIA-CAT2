@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agribix - Your Source for Agricultural Products</title>
+    <link rel="stylesheet" href="index.css">
+      
+</head>
+
+<form class="update">
+    <label for="id">Document id:</label>
+    <input type="text" name="id" required>
+
+    <button>update a book</button>
+  </form>
+
+  <h2>Firebase Auth</h2>
+  
+  <form class="signup">
+    <label for="email">email:</label>
+    <input type="email"name="email">
+    <label for="password">password:</label>
+    <input type="password" name="password">
+    <button>signup</button>
+  </form>
+
+  <form class="login">
+    <label for="email">email:</label>
+    <input type="email"name="email">
+    <label for="password">password:</label>
+    <input type="password" name="password">
+    <button>login</button>
+  </form>
+
+  <button class="logout">logout</button>
+
+  <script src="bundle.js"></script>
+
+<body>
+    <header>
+        <h1>Agribix</h1>
+        <p>Your Source for Agricultural Products</p>
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <a href='shop'>Shop</a>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        <style>
+            /* Add any additional styling here */
+            .product-card {
+                text-align: center;
+            }
+            img {
+                width: 100%;
+                max-width: 300px; /* Adjust the maximum width as needed */
+                height: auto;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <section id="Product-Categories">
+        <h2>Product Categories</h2>
+       
+        <div class="slick-carousel">
+            <div class="product-card">
+                <img src="./Images/Categories/AnimalProducts.jpg" alt="AnimalProducts">
+                <h3>Animal products</h3>
+                <p>Beef, Milk, Eggs e.t.c.</p>
+            </div>
+    
+            <div class="product-card">
+                <img src="/Images/Categories/Cereals.jpg" alt="Cereals">
+                <h3>Cereals</h3>
+                <p>Rice, Millet, Barley e.t.c.</p>  
+            </div>
+    
+            <div class="product-card">
+                <img src="/Images/Categories/Fruits.jpg" alt="Fruits">
+                <h3>Fruits</h3>
+                <p>Apple, Bananas, Oranges e.t.c.</p>  
+            </div>
+    
+            <div class="product-card">
+                <img src="/Images/Categories/Vegetables.jpg" alt="vegetables">
+                <h3>Vegetables</h3>
+                <p>Capsicum, Coriander, Carrots e.t.c.</p>  
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slick-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
+        });
+    </script>
+ 
+
+    <section id="Introduction">
+        <h2>Introduction</h2>
+        <p>Welcome to Agribix, your trusted source for high-quality agricultural products. We provide order services to
+            our customers,delivering fruits, cereals and various other agricultural products.</p>
+    </section>
+
+    <a name='shop'></a>
+    <section id="shop">
+        <h2>Shop</h2>
+        
+            <h3>Animal Products</h3>
+
+            <div class="product" id="Beef">
+                <img src="/Images/Animal products/Beef.png" alt="Beef">
+                <h4>Beef</h4>
+                <p>Price: 650 KSH/KG</p>
+                <label for="quantity-Beef-1">Quantity:</label>
+                <input type="number" id="quantity-Beef-1" name="quantity" min="0" value="0">
+            </div>
+        
+            <div class="product" id="Mutton">
+                <img src="/Images/Animal products/Mutton.png" alt="Mutton">
+                <h4>Mutton</h4>
+                <p>Price: 700 KSH/KG</p>
+                <label for="quantity-Mutton-1">Quantity:</label>
+                <input type="number" id="quantity-Mutton-1" name="quantity" min="0" value="0">
+            </div>
+        
+            <div class="product" id="Chicken">
+                <img src="/Images/Animal products/Chicken.png" alt="Chicken">
+                <h4>Chicken</h4>
+                <p>Price: 550 KSH</p>
+                <label for="quantity-Chicken-1">Quantity:</label>
+                <input type="number" id="quantity-Chicken-1" name="quantity" min="0" value="0">
+            </div>
+        
+            <div class="product" id="Eggs">
+                <img src="/Images/Animal products/Eggs.png" alt="Eggs">
+                <h4>Eggs</h4>
+                <p>Price: 90 KSH/mintray</p>
+                <label for="quantity-Eggs-1">Quantity:</label>
+                <input type="number" id="quantity-Eggs-1" name="quantity" min="0" value="0">
+            </div>
+        
+            <div class="product" id="Milk">
+                <img src="/Images/Animal products/Milk.png" alt="Milk">
+                <h4>Milk</h4>
+                <p>Price: 100 KSH/Litre</p>
+                <label for="quantity-Milk-1">Quantity:</label>
+                <input type="number" id="quantity-Milk-1" name="quantity" min="0" value="0">
+            </div>
+        
+            <div class="product" id="Tilapia">
+                <img src="/Images/Animal products/Tilapia.png" alt="Tilapia">
+                <h4>Tilapia</h4>
+                <p>Price: 250 KSH</p>
+                <label for="quantity-Tilapia-1">Quantity:</label>
+                <input type="number" id="quantity-Tilapia-1" name="quantity" min="0" value="0">
+            </div>
+        
+            <div class="product" id="Sardines"> 
+                <img src="/Images/Animal products/Sardines.png" alt="Sardines">
+                <h4>Sardines</h4>
+                <p>Price: 100 KSH/can</p>
+                <label for="quantity-Sardines-1">Quantity:</label>
+                <input type="number" id="quantity-Sardines-1" name="quantity" min="0" value="0">
+            </div>
+
+            <h3>Fruits</h3>
+
+            <div class="product" id="Apples">
+                <img src="/Images/Fruits/Apples.png" alt="Apples">
+                <h4>Apples</h4>
+                <p>Price: 90 KSH</p>
+                <label for="quantity-Apples-1">Quantity:</label>
+                <input type="number" id="quantity-Apples-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Bananas">
+                <img src="/Images/Fruits/bananas.png" alt="Bananas">
+                <h4>Bananas</h4>
+                <p>Price: 60 KSH</p>
+                <label for="quantity-Bananas-1">Quantity:</label>
+                <input type="number" id="quantity-bananas-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Guavas">
+                <img src="/Images/Fruits/Guavas.png" alt="Guavas">
+                <h4>Guavas</h4>
+                <p>Price: 70 KSH</p>
+                <label for="quantity-Guavas-1">Quantity:</label>
+                <input type="number" id="quantity-Guavas-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Oranges">
+                <img src="/Images/Fruits/Oranges.png" alt="Oranges">
+                <h4>Oranges</h4>
+                <p>Price: 80 KSH</p>
+                <label for="quantity-Oranges-1">Quantity:</label>
+                <input type="number" id="quantity-Oranges-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Pears">
+                <img src="/Images/Fruits/Pears.png" alt="Pears">
+                <h4>Pears</h4>
+                <p>Description of Fruit 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Price: 70 KSH</p>
+                <label for="quantity-Pears-1">Quantity:</label>
+                <input type="number" id="quantity-Pears-1" name="quantity" min="1" value="1">
+            </div>
+
+            <div class="product" id="Pineapples">
+                <img src="/Images/Fruits/Pineapples.png" alt="Pineapples">
+                <h4>Pineapples</h4>
+                <p>Price: 70 KSH</p>
+                <label for="quantity-Pineapples-1">Quantity:</label>
+                <input type="number" id="quantity-Pineapples-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Watermelons">
+                <img src="/Images/Fruits/Watermelons.png" alt="Watermelons">
+                <h4>Watermelons</h4>
+                <p>Price: 80 KSH</p>
+                <label for="quantity-Watermelons-1">Quantity:</label>
+                <input type="number" id="quantity-Watermelons-1" name="quantity" min="0" value="0">
+            </div>
+
+
+            <h3>Cereals</h3>
+
+            <div class="product" id="Barley">
+                <img src="/Images/Cereals/Barley.png" alt="Barley">
+                <h4>Barley</h4>
+                <p>Price: 130 KSH</p>
+                <label for="quantity-Barley-1">Quantity:</label>
+                <input type="number" id="quantity-Barley-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Maize">
+                <img src="/Images/Cereals/Maize.png" alt="Maize">
+                <h4>Maize</h4>
+                <p>Price: 120 KSH</p>
+                <label for="quantity-Maize-1">Quantity:</label>
+                <input type="number" id="quantity-Maize-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Millet">
+                <img src="/Images/Cereals/Millet.png" alt="Millet">
+                <h4>Millet</h4>
+                <p>Price: 120 KSH</p>
+                <label for="quantity-Millet-1">Quantity:</label>
+                <input type="number" id="quantity-Millet-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Rice">
+                <img src="/Images/Cereals/Rice.png" alt="Rice">
+                <h4>Rice</h4>
+                <p>Price: 120 KSH</p>
+                <label for="quantity-Rice-1">Quantity:</label>
+                <input type="number" id="quantity-Rice-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Wheat">
+                <img src="/Images/Cereals/Wheat.png" alt="Wheat">
+                <h4>Wheat</h4>
+                <p>Price: 140 KSH</p>
+                <label for="quantity-Wheat-1">Quantity:</label>
+                <input type="number" id="quantity-Wheat-1" name="quantity" min="0" value="0">
+            </div>
+
+    
+            <h3>Vegetables</h3>
+
+            <div class="product" id="Capsicum">
+                <img src="/Images/Vegetables/Capsicum.png" alt="Capsicum">
+                <h4>Capsicum</h4>
+                <p>Price: 70 KSH</p>
+                <label for="quantity-Capsicum-1">Quantity:</label>
+                <input type="number" id="quantity-Capsicum-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Carrots">
+                <img src="/Images/Vegetables/Carrots.png" alt="Carrots">
+                <h4>Carrots</h4>
+                <p>Price: 70 KSH</p>
+                <label for="quantity-Carrotse-1">Quantity:</label>
+                <input type="number" id="quantity-Carrots-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Cassava">
+                <img src="/Images/Vegetables/Cassava.png" alt="Cassava">
+                <h4>Cassava</h4>
+                <p>Price: 70 KSH</p>
+                <label for="quantity-Cassava-1">Quantity:</label>
+                <input type="number" id="quantity-Cassava-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Coriander">
+                <img src="/Images/Vegetables/Coriander.png" alt="Coriander">
+                <h4>Coriander</h4>
+                <p>Price: $3.99</p>
+                <label for="quantity-Coriander-1">Quantity:</label>
+                <input type="number" id="quantity-Coriander-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Kale">
+                <img src="/Images/Vegetables/Kale.png" alt="Kale">
+                <h4>Kale</h4>
+                <p>Price: 50 KSH</p>
+                <label for="quantity-Kale-1">Quantity:</label>
+                <input type="number" id="quantity-Kale-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Onions">
+                <img src="/Images/Vegetables/Onions.png" alt="Onions">
+                <h4>Vegetable 1</h4>
+                <p>Price: $3.99</p>
+                <label for="quantity-Onions-1">Quantity:</label>
+                <input type="number" id="quantity-Onions-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Peas">
+                <img src="/Images/Vegetables/Peas.png" alt="Peas">
+                <h4>Peas</h4>
+                <p>Price: 70 KSH</p>
+                <label for="quantity-Peas-1">Quantity:</label>
+                <input type="number" id="quantity-Peas-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Peppers">
+                <img src="/Images/Vegetables/Peppers.png" alt="Peppers">
+                <h4>Peppers</h4>
+                <p>Price: 40 KSH/kg</p>
+                <label for="quantity-Peppers-1">Quantity:</label>
+                <input type="number" id="quantity-Peppers-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Potatoes">
+                <img src="/Images/Vegetables/Potatoes.png" alt="Potatoes">
+                <h4>Potatoes</h4>
+                <p>Pric: 80 KSH/KG</p>
+                <label for="quantity-Potatoes-1">Quantity:</label>
+                <input type="number" id="quantity-Potatoes-1" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="Sweet_Potatoes">
+                <img src="/Images/Vegetables/Sweet Potatoes.png" alt="Sweet_Potatoes">
+                <h4>Sweet Potatoes</h4>
+                <p>Price: 70 KSH/KG</p>
+                <label for="quantity-Sweet-potatoes">Quantity:</label>
+                <input type="number" id="quantity-Sweet-potatoes" name="quantity" min="0" value="0">
+            </div>
+
+            <div class="product" id="tomatoes">
+                <img src="/Images/Vegetables/tomatoes.png" alt="tomatoes">
+                <h4>Tomatoes</h4>
+                <p>Price: 50 KSH/KG</p>
+                <label for="Tomatoes">Quantity:</label>
+                <input type="number" id="quantity-tomatoes-1" name="quantity" min="0" value="0">
+            </div>
+        
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, feel free to contact us:</p>
+        <address>
+            Email: <a href="mailto:info@agribix.com">info@agribix.com</a><br>
+            Phone: +254 789 101 112
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Agribix. All rights reserved.</p>
+    </footer>
+
+    <!-- Add your JavaScript link here -->
+    <!-- <script src="script.js"></script> -->
+    <script src="bundle.js"></script>
+    <script src="/dist/dist/main.js"></script>
+    <script src="/dist/src/index.js"></script>
+    <script src="/newFile.js"></script>
+</body>
+
+</html>
+
